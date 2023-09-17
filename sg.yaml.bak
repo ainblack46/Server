@@ -1,0 +1,20 @@
+#bug bisa di ketik langsung ke proxie atau seperti dibawah ini.
+akrab:
+ - &akrab0 127.99.00.11
+ - &akrab0 128.99.918.1
+#diatas hanya contoh 
+
+proxies:
+  - name: 1306_idlgrpc.mainssh
+    server: *akrab0
+    port: 443
+    type: vless
+    uuid: 24ac920d-54d3-453e-8267-479d467142b4
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idlgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts:
+      grpc-service-name: vlessgrpc
+    udp: true
